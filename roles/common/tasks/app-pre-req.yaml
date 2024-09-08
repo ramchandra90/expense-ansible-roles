@@ -1,12 +1,12 @@
 - name: remove existing app location
   ansible.builtin.file:
-    path: "{{ app_laction }}"
+    path: "{{ app_location }}"
     state: absent
   ignore_errors: true
 
 - name: create app directory
   ansible.builtin.file:
-    path: "{{ app_laction }}"
+    path: "{{ app_location }}"
     state: directory
 
 - name: "download the {{ component }} code"
