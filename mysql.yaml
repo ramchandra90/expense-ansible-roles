@@ -1,5 +1,8 @@
 - name: configure mysql server
   hosts: mysql
   become: yes
+  vars_files:
+  - /var/expense/
+
   roles: 
   - mysql
